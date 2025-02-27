@@ -1,0 +1,10 @@
+import{j as p}from"./jsx-runtime-D_zvdyIk.js";import{r as g}from"./index-B7o9TaAI.js";import{s as y}from"./transform-BIeV-TGt.js";import{b as j}from"./band-COO5LgbV.js";import{a as B}from"./linear-BvEZjWga.js";import{m as E}from"./max-DBeXZoyG.js";import{a as _,b as R}from"./axis-D3QohQNI.js";import"./index-BM9YtLjs.js";import"./ordinal-BIATHBfR.js";const m=[{label:"월",value:10},{label:"화",value:20},{label:"수",value:15},{label:"목",value:25},{label:"금",value:30}],c=()=>{const s=g.useRef(null);return g.useEffect(()=>{if(!s.current)return;const d=400,u=300,e={top:20,right:20,bottom:30,left:40},w=d-e.left-e.right,o=u-e.top-e.bottom,h=y(s.current).attr("width",d).attr("height",u),n=h.append("g").attr("transform",`translate(${e.left},${e.top})`),l=j().domain(m.map(t=>t.label)).range([0,w]).padding(.1),i=B().domain([0,E(m,t=>t.value)||0]).range([o,0]);return n.selectAll("rect").data(m).enter().append("rect").attr("x",t=>l(t.label)||0).attr("y",t=>i(t.value)).attr("width",l.bandwidth()).attr("height",t=>o-i(t.value)).attr("fill","steelblue"),n.append("g").attr("transform",`translate(0,${o})`).call(_(l)),n.append("g").call(R(i)),()=>{h.selectAll("*").remove()}},[]),p.jsx("svg",{ref:s})};c.__docgenInfo={description:"",methods:[],displayName:"SimpleBarChart"};const O={title:"Charts/SimpleBarChart",component:c,parameters:{layout:"centered"},tags:["autodocs"]},a={args:{}},r={render:()=>p.jsx("div",{style:{width:"600px",height:"400px"},children:p.jsx(c,{})})};var f,x,v;a.parameters={...a.parameters,docs:{...(f=a.parameters)==null?void 0:f.docs,source:{originalSource:`{
+  args: {}
+}`,...(v=(x=a.parameters)==null?void 0:x.docs)==null?void 0:v.source}}};var b,S,C;r.parameters={...r.parameters,docs:{...(b=r.parameters)==null?void 0:b.docs,source:{originalSource:`{
+  render: () => <div style={{
+    width: "600px",
+    height: "400px"
+  }}>
+      <SimpleBarChart />
+    </div>
+}`,...(C=(S=r.parameters)==null?void 0:S.docs)==null?void 0:C.source}}};const k=["Default","WithCustomSize"];export{a as Default,r as WithCustomSize,k as __namedExportsOrder,O as default};

@@ -1,0 +1,18 @@
+import{j as u}from"./jsx-runtime-D_zvdyIk.js";import{H as q,a as H}from"./highcharts-react.min-DHwbWW01.js";import"./index-BM9YtLjs.js";const L=["1월","2월","3월","4월","5월","6월","7월","8월","9월","10월","11월","12월"],m=["#7cb5ec","#434348","#90ed7d","#f7a35c","#8085e9"],V="#FF9999",G="rgba(255, 153, 153, 0.1)",b=({title:e,subtitle:t,yearlyData:s,height:T=400,className:C,yAxisTitle:F="값",xAxisTitle:v="월"})=>{const O=s.map((o,l)=>({type:"column",name:`${o.year}년`,data:o.data,color:o.color||m[l%m.length]})),_={type:"area",name:"월별 평균",data:Array.from({length:12},(o,l)=>{const c=s.map(d=>d.data[l]),E=c.reduce((d,R)=>d+R,0)/c.length;return Math.round(E*10)/10}),color:V,fillColor:G,fillOpacity:1,lineWidth:2,marker:{enabled:!0,radius:4},zIndex:1},D={chart:{type:"column",height:T},title:{text:e},subtitle:{text:t},xAxis:{categories:L,title:{text:v},crosshair:!0},yAxis:{title:{text:F}},tooltip:{headerFormat:"<b>{point.key}</b><table>",pointFormat:'<tr><td style="color: {series.color}">● {series.name}: </td><td style="text-align: right"><b>{point.y:,.1f}</b></td></tr>',footerFormat:"</table>",shared:!0,useHTML:!0},plotOptions:{column:{pointPadding:.2,borderWidth:0,groupPadding:.1},area:{fillOpacity:.1,lineWidth:2,marker:{enabled:!0,radius:4},states:{hover:{lineWidth:2}}},series:{states:{inactive:{opacity:1}}}},series:[...O,_],credits:{enabled:!1},legend:{backgroundColor:"#FFFFFF",shadow:!0}};return u.jsx("div",{className:C,children:u.jsx(q,{highcharts:H,options:D})})};b.__docgenInfo={description:"",methods:[],displayName:"GroupedBarChart",props:{title:{required:!1,tsType:{name:"string"},description:""},subtitle:{required:!1,tsType:{name:"string"},description:""},yearlyData:{required:!0,tsType:{name:"Array",elements:[{name:"YearlyData"}],raw:"YearlyData[]"},description:""},height:{required:!1,tsType:{name:"union",raw:"string | number",elements:[{name:"string"},{name:"number"}]},description:"",defaultValue:{value:"400",computed:!1}},className:{required:!1,tsType:{name:"string"},description:""},yAxisTitle:{required:!1,tsType:{name:"string"},description:"",defaultValue:{value:'"값"',computed:!1}},xAxisTitle:{required:!1,tsType:{name:"string"},description:"",defaultValue:{value:'"월"',computed:!1}}}};const N={title:"Highcharts/Advanced/GroupedBarChart",component:b,tags:["autodocs"],parameters:{layout:"centered"}},a=(e,t=20)=>e.map(s=>s+(Math.random()-.5)*t),r=[50,40,60,80,100,90,85,95,120,110,70,80],A=[{year:2020,data:a(r)},{year:2021,data:a(r.map(e=>e*1.2))},{year:2022,data:a(r.map(e=>e*1.4))},{year:2023,data:a(r.map(e=>e*1.6))},{year:2024,data:a(r.map(e=>e*1.8))}],n={args:{title:"연도별 월간 데이터 비교 (평균 추세선 포함)",subtitle:"2020-2024 (연한 배경색으로 평균 추세 영역 표시)",yearlyData:A,yAxisTitle:"매출 (백만원)"}},i={args:{title:"연도별 월간 데이터 비교 (커스텀 색상)",subtitle:"2020-2024 (연한 배경색으로 평균 추세 영역 표시)",yearlyData:A.map((e,t)=>({...e,color:`hsl(${t*45}, 70%, 50%)`})),yAxisTitle:"매출 (백만원)"}};var p,y,g;n.parameters={...n.parameters,docs:{...(p=n.parameters)==null?void 0:p.docs,source:{originalSource:`{
+  args: {
+    title: "연도별 월간 데이터 비교 (평균 추세선 포함)",
+    subtitle: "2020-2024 (연한 배경색으로 평균 추세 영역 표시)",
+    yearlyData,
+    yAxisTitle: "매출 (백만원)"
+  }
+}`,...(g=(y=n.parameters)==null?void 0:y.docs)==null?void 0:g.source}}};var h,f,x;i.parameters={...i.parameters,docs:{...(h=i.parameters)==null?void 0:h.docs,source:{originalSource:`{
+  args: {
+    title: "연도별 월간 데이터 비교 (커스텀 색상)",
+    subtitle: "2020-2024 (연한 배경색으로 평균 추세 영역 표시)",
+    yearlyData: yearlyData.map((data, index) => ({
+      ...data,
+      color: \`hsl(\${index * 45}, 70%, 50%)\`
+    })),
+    yAxisTitle: "매출 (백만원)"
+  }
+}`,...(x=(f=i.parameters)==null?void 0:f.docs)==null?void 0:x.source}}};const W=["Default","CustomColors"];export{i as CustomColors,n as Default,W as __namedExportsOrder,N as default};
