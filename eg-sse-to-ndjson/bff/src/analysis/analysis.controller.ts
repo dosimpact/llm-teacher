@@ -15,4 +15,12 @@ export class AnalysisController {
   ) {
     return this.analysisService.analyzeText(analysisRequestDto, response);
   }
+
+  @Post('openai')
+  async analyzeTextOpenAi(
+    @Body() analysisRequestDto: AnalysisRequestDto,
+    @Res() response: Response,
+  ) {
+    return this.analysisService.analyzeTextOpenAi(analysisRequestDto, response);
+  }
 }

@@ -16,6 +16,14 @@ export class AnalyzeController {
     return this.analyzeService.analyzeText(analyzeRequestDto, response);
   }
 
+  @Post('openai')
+  async analyzeTextOpenAi(
+    @Body() analyzeRequestDto: AnalyzeRequestDto,
+    @Res() response: Response,
+  ) {
+    return this.analyzeService.analyzeTextOpenAi(analyzeRequestDto, response);
+  }
+
   @Sse('events')
   sse(): Observable<MessageEvent> {
     return interval(1000).pipe(

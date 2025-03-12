@@ -1,6 +1,7 @@
 "use client";
 
 import AnalysisForm from "./components/AnalysisForm";
+import AnalysisFormV2 from "./components/AnalysisFormV2";
 import { useChat } from "@ai-sdk/react";
 
 export default function Home() {
@@ -16,9 +17,16 @@ export default function Home() {
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
       <main className="container mx-auto py-12">
         <h1 className="text-3xl font-bold text-center mb-8 text-gray-900 dark:text-white">
-          LLM 텍스트 분석
+          LLM 텍스트 분석 - V 1
         </h1>
         <AnalysisForm />
+      </main>
+
+      <main className="container mx-auto py-12">
+        <h1 className="text-3xl font-bold text-center mb-8 text-gray-900 dark:text-white">
+          LLM 텍스트 분석 - V 2
+        </h1>
+        <AnalysisFormV2 />
       </main>
 
       {/* <>

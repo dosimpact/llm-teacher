@@ -34,6 +34,8 @@ export default function AnalysisForm() {
       },
     });
 
+  console.log(data);
+
   return (
     <div className="p-4 max-w-md mx-auto bg-white dark:bg-gray-800 rounded-xl shadow-md flex flex-col h-full">
       <div className="flex-grow overflow-y-auto space-y-2 mb-4">
